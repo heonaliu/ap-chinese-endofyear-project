@@ -43,9 +43,7 @@ export default function Home() {
       <SchoolLife />
       <HostFamily />
       <CulturalComparison />
-      <DevelopmentProcess />
       <Gallery />
-      <FinalReflection />
       <Footer />
     </main>
   )

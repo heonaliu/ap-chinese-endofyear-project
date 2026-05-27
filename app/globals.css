@@ -1,0 +1,245 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Google Fonts ─────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ─── CSS Variables ─────────────────────────────────────────── */
+:root {
+  --accent-red: #dc2626;
+  --accent-red-light: #ef4444;
+  --accent-gold: #d97706;
+  --accent-gold-light: #f59e0b;
+  --surface-dark: #0c0a09;
+  --surface-card: #161412;
+  --border-subtle: rgba(255,255,255,0.06);
+}
+
+/* ─── Base Reset ─────────────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-inter), 'Inter', system-ui, sans-serif;
+  background-color: #0c0a09;
+  color: #f5f5f4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ─── Light Mode ────────────────────────────────────────────── */
+.light body,
+:root.light body {
+  background-color: #faf6f0;
+  color: #1c1917;
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background: #1c1917;
+}
+::-webkit-scrollbar-thumb {
+  background: #dc2626;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ef4444;
+}
+
+/* ─── Typography ─────────────────────────────────────────────── */
+.font-chinese {
+  font-family: 'Noto Serif SC', 'Source Han Serif SC', 'STSong', serif;
+}
+
+.font-serif-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* ─── Gradient Text ──────────────────────────────────────────── */
+.gradient-gold {
+  background: linear-gradient(135deg, #d97706 0%, #fbbf24 50%, #d97706 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-red {
+  background: linear-gradient(135deg, #b91c1c 0%, #ef4444 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Glass Morphism ─────────────────────────────────────────── */
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* ─── Card Styles ────────────────────────────────────────────── */
+.card-dark {
+  background: #161412;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+}
+
+.card-dark:hover {
+  border-color: rgba(220, 38, 38, 0.3);
+  box-shadow: 0 0 40px rgba(220, 38, 38, 0.08);
+}
+
+/* ─── Red Line Accent ────────────────────────────────────────── */
+.red-accent-line {
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom, #dc2626, transparent);
+  border-radius: 2px;
+}
+
+/* ─── Section Spacing ────────────────────────────────────────── */
+.section-padding {
+  padding: 5rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 8rem 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding: 10rem 4rem;
+  }
+}
+
+/* ─── Ink Texture Overlay ────────────────────────────────────── */
+.ink-texture::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+/* ─── Placeholder Image Base ─────────────────────────────────── */
+.placeholder-img {
+  background: linear-gradient(135deg, #1c1917 0%, #292524 100%);
+  border: 1px dashed rgba(220, 38, 38, 0.3);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #78716c;
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.placeholder-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(220, 38, 38, 0.02) 50%, transparent 70%);
+}
+
+/* ─── Quote Block ────────────────────────────────────────────── */
+.quote-block {
+  border-left: 3px solid #dc2626;
+  padding-left: 1.5rem;
+  font-style: italic;
+  color: #a8a29e;
+}
+
+/* ─── Timeline ───────────────────────────────────────────────── */
+.timeline-line {
+  width: 2px;
+  background: linear-gradient(to bottom, #dc2626, #d97706, transparent);
+}
+
+/* ─── Comparison Split ───────────────────────────────────────── */
+.split-china {
+  border-left: 2px solid rgba(220, 38, 38, 0.4);
+}
+
+.split-usa {
+  border-left: 2px solid rgba(59, 130, 246, 0.4);
+}
+
+/* ─── Gallery Grid ───────────────────────────────────────────── */
+.gallery-item {
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+/* ─── Progress Bar ───────────────────────────────────────────── */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 9999;
+  transform-origin: left;
+  background: linear-gradient(to right, #dc2626, #f59e0b);
+}
+
+/* ─── Hover Glow ─────────────────────────────────────────────── */
+.hover-glow {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.hover-glow:hover {
+  box-shadow: 0 8px 40px rgba(220, 38, 38, 0.15);
+  transform: translateY(-2px);
+}
+
+/* ─── Text Selection ─────────────────────────────────────────── */
+::selection {
+  background: rgba(220, 38, 38, 0.3);
+  color: white;
+}

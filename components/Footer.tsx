@@ -116,7 +116,7 @@ export default function Footer() {
             <p className="text-stone-500 text-sm">
               <span className="text-stone-300 font-medium">Heona Liu</span>
               {' · '}
-              <span className="font-chinese">刘韩娜</span>
+              <span className="font-chinese">廖恩美</span>
               {' · '}
               AP Chinese Language and Culture
               {' · '}

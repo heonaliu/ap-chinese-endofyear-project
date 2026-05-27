@@ -137,7 +137,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1.2 }}
           className="text-accent-gold/70 text-sm tracking-widest uppercase mb-10"
         >
-          Heona Liu &nbsp;·&nbsp; 景山学校交流项目
+          Heona Liu &nbsp;·&nbsp; AP中文项目
         </motion.p>
 
         {/* Intro paragraph */}

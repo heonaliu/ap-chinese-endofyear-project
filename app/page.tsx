@@ -42,7 +42,6 @@ export default function Home() {
       <AboutExchange />
       <SchoolLife />
       <HostFamily />
-      <CulturalComparison />
       <Gallery />
       <Footer />
     </main>

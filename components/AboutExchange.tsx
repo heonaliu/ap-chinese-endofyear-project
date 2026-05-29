@@ -52,6 +52,7 @@ const storyCards = [
       en: '[ Write your story here: What did you know about China before going? What did you study? How did you prepare emotionally and practically? ]',
       zh: '[ 在这里写你的故事：出发前你对中国了解多少？你做了哪些准备？ ]',
     },
+    image: '/images/arrival.jpg',
   },
   {
     prompt: { en: 'What I expected…', zh: '我的期待……' },
@@ -134,12 +135,24 @@ function StoryCard({ card, index }: StoryCardProps) {
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="card-dark rounded-xl overflow-hidden border border-white/5 hover:border-accent-red/20 transition-all duration-300"
     >
-      {/* Image placeholder */}
-      <PlaceholderImage
-        label={`Story photo ${index + 1}`}
-        sublabel="Jingshan exchange — travel / arrival"
-        aspectRatio="wide"
-      />
+      {/* Image */}
+      {card.image ? (
+        <div className="relative w-full aspect-video">
+          <Image
+            src={card.image}
+            alt={`Story photo ${index + 1}`}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 33vw"
+          />
+        </div>
+      ) : (
+        <PlaceholderImage
+          label={`Story photo ${index + 1}`}
+          sublabel="Jingshan exchange — travel / arrival"
+          aspectRatio="wide"
+        />
+      )}
 
       <div className="p-5">
         <p className={`font-chinese text-accent-gold text-sm mb-2`}>
@@ -261,23 +274,6 @@ export default function AboutExchange() {
                 <span className="text-stone-500 text-xs">北京市东城区 · Dongcheng District, Beijing</span>
               </div>
             </div>
-          </motion.div>
-
-          {/* Why I joined */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.25 }}
-            className="quote-block py-2"
-          >
-            <p className="text-stone-400 text-sm italic leading-relaxed">
-              {t({
-                en: `"I joined the exchange program because I wanted to understand China beyond what I read in textbooks — I wanted to live it, speak the language daily, and truly compare two worlds."`,
-                zh: `"我参加交流项目，是因为我想超越教科书，真正理解中国——我想亲身体验，每天用中文交流，真正比较两个世界。"`,
-              })}
-            </p>
-            <p className="text-stone-600 text-xs mt-2">— Heona Liu, 2025</p>
           </motion.div>
         </div>
       </div>

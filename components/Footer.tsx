@@ -5,10 +5,7 @@ import { motion } from 'framer-motion'
 const navLinks = [
   { label: '项目概述', href: '#overview' },
   { label: '交流项目', href: '#exchange' },
-  { label: '学校生活', href: '#school-life' },
   { label: '寄宿家庭', href: '#host-family' },
-  { label: '文化比较', href: '#culture' },
-  { label: '开发过程', href: '#development' },
   { label: '摄影集', href: '#gallery' },
   { label: '最终反思', href: '#reflection' },
 ]

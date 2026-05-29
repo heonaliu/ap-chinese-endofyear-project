@@ -25,7 +25,6 @@ export const metadata: Metadata = {
     'AP Chinese',
     'Jingshan School',
     'exchange student',
-    'cultural comparison',
     'school life',
     'China',
     '终身学习',

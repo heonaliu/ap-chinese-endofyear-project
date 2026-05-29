@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
 import { MapPin, Calendar, Plane, ChevronDown } from 'lucide-react'
 import SectionHeader from '@/components/ui/SectionHeader'
 import PlaceholderImage from '@/components/ui/PlaceholderImage'
@@ -232,11 +233,15 @@ export default function AboutExchange() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <PlaceholderImage
-              label="Jingshan School campus / arrival photo"
-              sublabel="Beijing school gate, first day, or campus overview"
-              aspectRatio="video"
-            />
+            <div className="relative w-full aspect-video rounded-xl overflow-hidden">
+              <Image
+                src="/images/jingshan-campus.png"
+                alt="Jingshan School campus"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
           </motion.div>
 
           {/* About the school */}
@@ -253,15 +258,9 @@ export default function AboutExchange() {
                 <h4 className="font-serif font-semibold text-stone-100 mb-1">
                   景山学校 · Jingshan School
                 </h4>
-                <span className="text-stone-500 text-xs">北京市朝阳区 · Chaoyang District, Beijing</span>
+                <span className="text-stone-500 text-xs">北京市东城区 · Dongcheng District, Beijing</span>
               </div>
             </div>
-            <p className="text-stone-400 text-sm leading-relaxed">
-              {t({
-                en: `Founded as an experimental school in 1960, Jingshan School is known throughout China for its innovative teaching methods and strong academic culture. It was the perfect place to experience the intensity and community of Chinese education.`,
-                zh: `景山学校创建于1960年，是一所以创新教学方法和浓厚学术文化著称的实验学校。这里是体验中国教育强度和集体精神的完美场所。`,
-              })}
-            </p>
           </motion.div>
 
           {/* Why I joined */}

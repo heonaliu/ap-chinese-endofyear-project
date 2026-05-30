@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
 import { Plus, Minus, GraduationCap, Users, Clock, Utensils, Shirt, BookMarked } from 'lucide-react'
 import SectionHeader from '@/components/ui/SectionHeader'
 import PlaceholderImage from '@/components/ui/PlaceholderImage'
@@ -23,6 +24,7 @@ const schoolCards = [
       zh: '课程从早上7:30上到下午5:00，包括数学、语文、英语和体育等多门学科。',
     },
     image: { label: 'Classroom schedule / class in session', sublabel: '课堂上课 · 课程表' },
+    imageSrc: '/images/school-sched.jpg',
     accent: 'red' as const,
   },
   {
@@ -55,6 +57,7 @@ const schoolCards = [
       zh: '所有学生都穿着统一的校服——运动服风格，印有学校标志。这创造了一种强烈的平等感和集体认同感。',
     },
     image: { label: 'Students in uniforms / school assembly', sublabel: '校服 · 集体活动' },
+    imageSrc: '/images/schooluniform.jpg',
     accent: 'red' as const,
   },
   {
@@ -71,6 +74,7 @@ const schoolCards = [
       zh: '食堂供应热腾腾的中国食物——米饭、饺子、面条、炒菜。用餐是集体性的，节奏很快，用筷子吃饭。',
     },
     image: { label: 'School cafeteria / meal time', sublabel: '食堂 · 午餐时间' },
+    imageSrc: '/images/food.jpg',
     accent: 'gold' as const,
   },
   {
@@ -103,6 +107,7 @@ const schoolCards = [
       zh: '早操、集体打扫卫生和班级竞赛都培养了强烈的集体责任感和学校荣誉感。',
     },
     image: { label: 'Morning exercises / group activity / assembly', sublabel: '早操 · 集体活动' },
+    imageSrc: '/images/sports.jpg',
     accent: 'gold' as const,
   },
 ]
@@ -123,11 +128,23 @@ function SchoolCard({ card, index }: { card: typeof schoolCards[0]; index: numbe
       className={`card-dark rounded-xl border border-white/5 hover:${accentBorder} overflow-hidden transition-all duration-300`}
     >
       {/* Image */}
-      <PlaceholderImage
-        label={card.image.label}
-        sublabel={card.image.sublabel}
-        aspectRatio="video"
-      />
+      {'imageSrc' in card && card.imageSrc ? (
+        <div className="relative w-full aspect-video">
+          <Image
+            src={card.imageSrc}
+            alt={card.image.label}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+          />
+        </div>
+      ) : (
+        <PlaceholderImage
+          label={card.image.label}
+          sublabel={card.image.sublabel}
+          aspectRatio="video"
+        />
+      )}
 
       <div className="p-5">
         {/* Header */}

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
 import { Home, Coffee, Bike, MessageCircle, Heart, ChevronDown } from 'lucide-react'
 import SectionHeader from '@/components/ui/SectionHeader'
 import PlaceholderImage from '@/components/ui/PlaceholderImage'
@@ -181,7 +182,15 @@ export default function HostFamily() {
       >
         <PlaceholderImage label="Host family home / apartment" aspectRatio="portrait" />
         <PlaceholderImage label="Family meal / dinner table" aspectRatio="portrait" sublabel="一起吃饭" />
-        <PlaceholderImage label="Host student & activities" aspectRatio="portrait" sublabel="寄宿同学" />
+        <div className="relative w-full aspect-[3/4] rounded-xl overflow-hidden">
+          <Image
+            src="/images/host-fam.jpg"
+            alt="Host student & activities"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 33vw, 20vw"
+          />
+        </div>
       </motion.div>
 
       {/* Intro quote */}

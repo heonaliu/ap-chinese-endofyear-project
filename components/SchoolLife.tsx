@@ -209,21 +209,7 @@ export default function SchoolLife() {
       />
 
       {/* Intro quote */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="mb-14 max-w-3xl"
-      >
-        <div className="quote-block py-2">
-          <p className="font-chinese text-stone-300 text-base md:text-lg leading-relaxed mb-2">
-            "教育不是灌满一桶水，而是点燃一把火。"
-          </p>
-          <p className="text-stone-500 text-sm italic">
-            "Education is not filling a bucket, but lighting a fire." — William Butler Yeats
-          </p>
-        </div>
-      </motion.div>
+      
 
       {/* Card Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">

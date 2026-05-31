@@ -193,21 +193,6 @@ export default function HostFamily() {
         </div>
       </motion.div>
 
-      {/* Intro quote */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="mb-12 quote-block py-2 max-w-2xl"
-      >
-        <p className="font-chinese text-stone-300 text-base leading-relaxed mb-2">
-          "家是心之所在，不论身在何处。"
-        </p>
-        <p className="text-stone-500 text-sm italic">
-          "Home is where the heart is, no matter where you are." — Chinese saying
-        </p>
-      </motion.div>
-
       {/* Journal cards grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
         {journalEntries.map((entry, i) => (

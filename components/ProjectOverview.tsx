@@ -179,53 +179,6 @@ export default function ProjectOverview() {
             ))}
           </div>
         </InfoCard>
-
-        {/* Chinese Usage Card */}
-        <InfoCard
-          icon={<Languages size={18} />}
-          title="Chinese Language Usage"
-          zhTitle="中文语言使用"
-          accent="red"
-          delay={0.4}
-        >
-          <div className="space-y-2">
-            {chineseUsage.map((item, i) => (
-              <motion.div
-                key={item.en}
-                initial={{ opacity: 0, x: -10 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.4 + i * 0.06 }}
-                className="flex items-center gap-2"
-              >
-                <div className="w-1 h-1 rounded-full bg-accent-red flex-shrink-0" />
-                <span className="text-stone-400 text-sm">{item.en}</span>
-                <span className="font-chinese text-stone-600 text-xs">{item.zh}</span>
-              </motion.div>
-            ))}
-          </div>
-        </InfoCard>
-
-        {/* Key Quote */}
-        <InfoCard
-          icon={<span className="text-2xl font-chinese">道</span>}
-          title="Core Belief"
-          zhTitle="核心信念"
-          accent="gold"
-          delay={0.5}
-        >
-          <blockquote className="quote-block">
-            <p className="font-chinese text-stone-300 text-base leading-relaxed mb-3">
-              "活到老，学到老。"
-            </p>
-            <p className="text-stone-500 text-xs italic">
-              "Live until old age, study until old age." — Chinese proverb
-            </p>
-          </blockquote>
-          <p className="text-stone-500 text-xs mt-3">
-            This proverb captures the spirit of lifelong learning — the central idea of this project.
-          </p>
-        </InfoCard>
       </div>
     </section>
   )

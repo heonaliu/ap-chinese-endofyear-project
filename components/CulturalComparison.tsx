@@ -242,7 +242,7 @@ export default function CulturalComparison() {
         englishTitle="Cultural Comparison"
         subtitle={t({
           en: 'A side-by-side look at how education and student life differ between China and the United States — drawn from my direct experience at Jingshan School.',
-          zh: '从我在景山学校的亲身经历出发，并排呈现中美两国教育和学生生活的差异。',
+          zh: '比较中美学生生活的差异。',
         })}
         themeTag="文化比较 · Cultural Comparison"
       />
@@ -306,7 +306,7 @@ export default function CulturalComparison() {
           <p className="text-stone-300 text-base leading-relaxed mb-4 max-w-3xl">
             {t({
               en: `This experience changed my understanding of education and showed me how culture influences daily student life. In China, education is deeply tied to collective responsibility, respect for elders, and a long-term view of success. In the US, we emphasize individual voice and personal growth. Neither is "better" — they reflect different values and different answers to the same question: what is school for?`,
-              zh: `这段经历改变了我对教育的理解，让我看到文化如何影响学生的日常生活。在中国，教育与集体责任、尊老爱幼和对成功的长远眼光紧密相连。在美国，我们强调个人声音和个人成长。两者都没有"更好"——它们反映了不同的价值观，以及对同一问题不同的回答：学校是为了什么？`,
+              zh: `这段经历改变了我对教育的理解。中国重视集体，美国重视个人——两者各有不同的价值观。`,
             })}
           </p>
           <blockquote className="quote-block py-2">

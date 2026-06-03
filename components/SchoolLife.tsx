@@ -21,7 +21,7 @@ const schoolCards = [
     },
     detail: {
       en: 'Classes run from 7:30 AM to 5:00 PM, with multiple subjects including math, Chinese literature, English, and physical education.',
-      zh: '课程从早上7:30上到下午5:00，包括数学、语文、英语和体育等多门学科。',
+      zh: '从7:30到17:00，科目丰富。',
     },
     image: { label: 'Classroom schedule / class in session', sublabel: '课堂上课 · 课程表' },
     imageSrc: '/images/school-sched.jpg',
@@ -38,9 +38,10 @@ const schoolCards = [
     },
     detail: {
       en: 'Students stand when greeting teachers, maintain quiet discipline, and show great deference to instructors — very different from American classroom dynamics.',
-      zh: '学生起立问候老师，保持安静守纪，对老师表现出极大的尊重——这与美国课堂氛围截然不同。',
+      zh: '学生非常尊重老师。',
     },
     image: { label: 'Classroom observation / students listening', sublabel: '课堂纪律 · 师生关系' },
+    imageSrc: '/images/classroom.jpg',
     accent: 'gold' as const,
   },
   {
@@ -54,7 +55,7 @@ const schoolCards = [
     },
     detail: {
       en: 'All students wear matching uniforms — tracksuit-style with the school logo. It creates a strong sense of equality and collective identity.',
-      zh: '所有学生都穿着统一的校服——运动服风格，印有学校标志。这创造了一种强烈的平等感和集体认同感。',
+      zh: '统一校服，体现集体精神。',
     },
     image: { label: 'Students in uniforms / school assembly', sublabel: '校服 · 集体活动' },
     imageSrc: '/images/schooluniform.jpg',
@@ -71,7 +72,7 @@ const schoolCards = [
     },
     detail: {
       en: 'The cafeteria serves hot Chinese food — rice, dumplings, noodles, stir-fries. Meals are communal and fast-paced, eaten with chopsticks.',
-      zh: '食堂供应热腾腾的中国食物——米饭、饺子、面条、炒菜。用餐是集体性的，节奏很快，用筷子吃饭。',
+      zh: '米饭、饺子、炒菜，用筷子吃饭。',
     },
     image: { label: 'School cafeteria / meal time', sublabel: '食堂 · 午餐时间' },
     imageSrc: '/images/food.jpg',
@@ -88,7 +89,7 @@ const schoolCards = [
     },
     detail: {
       en: 'Chinese high schoolers face enormous academic pressure — especially in preparation for the 高考 (gaokao, college entrance exam), which shapes much of the school culture.',
-      zh: '中国高中生面临巨大的学业压力——尤其是为高考做准备，这在很大程度上塑造了学校文化。',
+      zh: '为高考备考，压力很大。',
     },
     image: { label: 'Students studying / homework / books', sublabel: '学习 · 高考备考' },
     accent: 'red' as const,
@@ -104,10 +105,10 @@ const schoolCards = [
     },
     detail: {
       en: 'Morning exercises, group cleaning duties, and class competitions all foster a powerful sense of collective responsibility and school pride.',
-      zh: '早操、集体打扫卫生和班级竞赛都培养了强烈的集体责任感和学校荣誉感。',
+      zh: '早操和集体活动培养团队精神。',
     },
     image: { label: 'Morning exercises / group activity / assembly', sublabel: '早操 · 集体活动' },
-    imageSrc: '/images/sports.jpg',
+    imageSrc: '/images/wushu.jpg',
     accent: 'gold' as const,
   },
 ]
@@ -220,7 +221,7 @@ export default function SchoolLife() {
         englishTitle="School Life"
         subtitle={t({
           en: 'A deep look at daily student life at Jingshan School — from the first bell to the last class, and everything in between.',
-          zh: '深入了解景山学校的日常学生生活——从第一声铃声到最后一节课，以及其中的一切。',
+          zh: '景山学校的日常学生生活。',
         })}
         themeTag="学校生活 · School Life"
       />
@@ -247,7 +248,7 @@ export default function SchoolLife() {
         <p className="text-stone-300 text-sm leading-relaxed">
           {t({
             en: `One of the most striking aspects of Chinese school life is the collective spirit — students clean their classrooms together, perform morning exercises as a group, and compete in teams. This sense of shared responsibility was something I had never experienced in American schools.`,
-            zh: `中国学校生活最引人注目的一个方面是集体精神——学生们一起打扫教室，作为一个团体做早操，以班级为单位参加竞赛。这种共同责任感是我在美国学校从未经历过的。`,
+            zh: `集体精神是中国学校的特色——学生一起打扫、做操、参加班级竞赛。`,
           })}
         </p>
       </motion.div>

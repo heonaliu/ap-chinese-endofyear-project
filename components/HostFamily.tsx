@@ -20,7 +20,7 @@ const journalEntries = [
       en: `[ Write your story here: Describe a specific meal with your host family. What did you eat? What did you talk about? Were there any awkward moments? What did you learn about Chinese family culture from the dinner table? ]`,
       zh: `[ 在这里写你的故事：描述与寄宿家庭的一次具体用餐。你们吃了什么？谈了什么？有什么尴尬时刻？从饭桌上你了解到了什么中国家庭文化？ ]`,
     },
-    chineseReflection: '用餐时，家人之间的交流让我感受到了中国家庭温暖的氛围。',
+    chineseReflection: '一起吃饭，感受到了家的温暖。',
     accent: 'red' as const,
   },
   {
@@ -33,7 +33,7 @@ const journalEntries = [
       en: `[ Write your story here: How did you get to school each day? By subway, bus, or scooter? Describe the experience of commuting in Beijing. How did it feel compared to getting to school in the US? ]`,
       zh: `[ 在这里写你的故事：你每天怎么上学？乘地铁、公交还是电动车？描述在北京通勤的体验。与美国上学相比感觉如何？ ]`,
     },
-    chineseReflection: '北京的公共交通让我大开眼界——这座城市的规模令人叹为观止。',
+    chineseReflection: '北京的公共交通让我大开眼界。',
     accent: 'gold' as const,
   },
   {
@@ -46,7 +46,7 @@ const journalEntries = [
       en: `[ Write your story here: Describe specific moments when you had to use Chinese with your host family. Were there funny misunderstandings? When did you feel most proud of your language ability? What new words did you learn at home? ]`,
       zh: `[ 在这里写你的故事：描述你必须用中文与寄宿家庭交流的特定时刻。有没有有趣的误解？你什么时候对自己的语言能力最感到自豪？你在家里学到了哪些新词？ ]`,
     },
-    chineseReflection: '当我用中文说出一句完整的话时，他们脸上露出的惊喜让我既骄傲又开心。',
+    chineseReflection: '用中文交流让我感到骄傲和开心。',
     accent: 'red' as const,
   },
   {
@@ -59,7 +59,7 @@ const journalEntries = [
       en: `[ Write your story here: What were the morning and evening routines like? Describe the layout of the apartment. What surprised you most about how the family lived? Were there household customs you had to adapt to? ]`,
       zh: `[ 在这里写你的故事：早晨和晚上的作息是什么样的？描述公寓的布局。家庭生活方式中什么让你最惊讶？有哪些家庭习惯需要适应？ ]`,
     },
-    chineseReflection: '中国家庭的日常生活与美国家庭有着微妙但深刻的差异。',
+    chineseReflection: '中美家庭生活有很多不同。',
     accent: 'gold' as const,
   },
   {
@@ -72,7 +72,7 @@ const journalEntries = [
       en: `[ Write your story here: Describe the moment you felt most at home with your host family. Was it a meal, a conversation, a shared joke? How did their hospitality change your understanding of Chinese culture? ]`,
       zh: `[ 在这里写你的故事：描述你与寄宿家庭相处中最有家的感觉的时刻。是一顿饭、一次对话还是一个共同的玩笑？他们的热情款待如何改变了你对中国文化的理解？ ]`,
     },
-    chineseReflection: '中国人的热情好客让我深深感动——他们把我当作自己家人一样对待。',
+    chineseReflection: '他们把我当作家人对待，非常感动。',
     accent: 'red' as const,
   },
 ]
@@ -168,7 +168,7 @@ export default function HostFamily() {
         englishTitle="Host Family Experience"
         subtitle={t({
           en: 'Living with a Chinese host student and their family gave me an inside view of daily life, hospitality, and family culture that no classroom could provide.',
-          zh: '与中国寄宿同学及其家人共同生活，让我从内部了解了日常生活、热情好客和家庭文化——这是任何课堂都无法提供的。',
+          zh: '和寄宿家庭一起生活，了解中国家庭文化。',
         })}
         themeTag="家庭与关系 · Family & Relationships"
       />
@@ -219,7 +219,15 @@ export default function HostFamily() {
             </p>
           </div>
           <div className="md:w-48 flex-shrink-0">
-            <PlaceholderImage label="Memorable host family moment" aspectRatio="square" />
+            <div className="relative w-full aspect-square rounded-xl overflow-hidden">
+              <Image
+                src="/images/host-moment.jpg"
+                alt="Memorable host family moment"
+                fill
+                className="object-cover"
+                sizes="12rem"
+              />
+            </div>
           </div>
         </div>
 

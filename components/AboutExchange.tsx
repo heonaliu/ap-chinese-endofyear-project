@@ -17,7 +17,7 @@ const timelineEvents = [
     icon: <Calendar size={16} />,
     description: {
       en: `The application process, language preparation, and the mix of excitement and nervousness before leaving for China. I spent months studying extra Chinese vocabulary and reading about Beijing's culture.`,
-      zh: `申请过程、语言准备，以及在出发前那种兴奋与紧张交织的心情。我花了几个月时间学习额外的中文词汇，阅读有关北京文化的资料。`,
+      zh: `出发前做了语言准备，心情既兴奋又紧张。`,
     },
     color: 'accent-gold',
   },
@@ -28,7 +28,7 @@ const timelineEvents = [
     icon: <Plane size={16} />,
     description: {
       en: `Landing at Beijing Capital International Airport and meeting my host student for the first time. The scale of the city, the sounds, the smells — everything was overwhelming in the best possible way.`,
-      zh: `降落在北京首都国际机场，第一次见到我的寄宿同学。这座城市的规模、声音、气味——一切都以最美好的方式令人震撼。`,
+      zh: `降落北京，第一次见到寄宿同学。`,
     },
     color: 'accent-red',
   },
@@ -39,7 +39,7 @@ const timelineEvents = [
     icon: <MapPin size={16} />,
     description: {
       en: `Three weeks immersed in a completely different educational environment. Attending classes, navigating school culture, joining group activities, and slowly becoming part of a new community.`,
-      zh: `三周沉浸在完全不同的教育环境中。参加课程、了解学校文化、参与集体活动，慢慢成为新社区的一部分。`,
+      zh: `三周沉浸在不同的教育与文化中。`,
     },
     color: 'accent-gold',
   },
@@ -208,7 +208,7 @@ export default function AboutExchange() {
         englishTitle="About the Exchange"
         subtitle={t({
           en: 'Jingshan School (景山学校) is a prestigious experimental school in Beijing, China, known for its high academic standards and cultural programs. This section introduces the program, my motivations, and my first impressions.',
-          zh: '景山学校是北京一所享有盛誉的实验学校，以其高学术标准和文化项目而闻名。本节介绍了该项目、我的动机和第一印象。',
+          zh: '介绍景山学校交流项目与我的第一印象。',
         })}
         themeTag="Identity · Personal Experience"
       />

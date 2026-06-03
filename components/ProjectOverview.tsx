@@ -82,7 +82,7 @@ export default function ProjectOverview() {
         englishTitle="Project Overview"
         subtitle={t({
           en: 'This section provides a clear map of the project — themes, format, language use, and purpose — for teachers and graders.',
-          zh: '本节为教师和评分者提供清晰的项目概览——主题、形式、语言使用和目的。',
+          zh: '项目主题、形式与目的概述。',
         })}
         themeTag="All Five AP Themes"
       />
@@ -100,7 +100,7 @@ export default function ProjectOverview() {
             <p className="text-stone-400 text-sm leading-relaxed">
               {t({
                 en: 'Interactive React.js storytelling website built with Next.js 14, Tailwind CSS, and Framer Motion animations.',
-                zh: '使用Next.js 14、Tailwind CSS和Framer Motion动画构建的交互式React.js叙事网站。',
+                zh: '用React.js制作的互动网站。',
               })}
             </p>
             <div className="flex flex-wrap gap-2 mt-3">
@@ -124,12 +124,12 @@ export default function ProjectOverview() {
           <p className="text-stone-400 text-sm leading-relaxed">
             {t({
               en: 'Documenting my experience as an exchange student at Jingshan School in Beijing, comparing education, culture, and daily life between China and the United States.',
-              zh: '记录我作为交流生在北京景山学校的经历，比较中美两国在教育、文化和日常生活方面的差异。',
+              zh: '记录我在景山学校的学习生活。',
             })}
           </p>
           <div className="mt-3 p-3 bg-stone-900 rounded-lg border border-stone-700">
             <p className="font-chinese text-accent-gold/80 text-xs leading-relaxed">
-              "通过亲身经历，比较中美两国学生生活与文化差异，探索个人成长与认同。"
+              "比较中美文化，探索个人成长。"
             </p>
           </div>
         </InfoCard>
@@ -145,7 +145,7 @@ export default function ProjectOverview() {
           <p className="text-stone-400 text-sm leading-relaxed">
             {t({
               en: 'To reflect on and share the cultural, educational, and personal growth experiences gained during the Jingshan exchange program through bilingual storytelling.',
-              zh: '通过双语叙事，反思并分享在景山学校交流项目中获得的文化、教育和个人成长经历。',
+              zh: '分享我的文化与成长经历。',
             })}
           </p>
         </InfoCard>

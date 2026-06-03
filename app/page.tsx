@@ -38,12 +38,13 @@ export default function Home() {
 
       {/* Page sections — in order */}
       <Hero />
-      <ProjectOverview />
+      
       <AboutExchange />
       <SchoolLife />
       <HostFamily />
       <Gallery />
       <Footer />
+      <ProjectOverview />
     </main>
   )
 }

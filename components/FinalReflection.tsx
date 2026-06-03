@@ -21,7 +21,7 @@ const reflections = [
       en: `"What I am most proud of from this exchange is…"`,
       zh: `"这次交流让我最骄傲的是……"`,
     },
-    chineseReflection: '能够用中文与景山同学们进行真正的对话，让我深感骄傲。',
+    chineseReflection: '用中文对话，让我感到骄傲。',
     accent: 'red' as const,
   },
   {
@@ -38,7 +38,7 @@ const reflections = [
       en: `"The most challenging part of this journey was…"`,
       zh: `"这段旅程中最具挑战性的部分是……"`,
     },
-    chineseReflection: '刚开始时，我在语言上遇到了很多困难，但每一次突破都让我更加坚强。',
+    chineseReflection: '语言挑战很大，但每次突破让我更强。',
     accent: 'gold' as const,
   },
   {
@@ -55,7 +55,7 @@ const reflections = [
       en: `"In terms of my Chinese language, I grew the most in…"`,
       zh: `"在中文方面，我进步最大的是……"`,
     },
-    chineseReflection: '通过每天的沉浸式学习，我的口语和听力都有了显著提高。',
+    chineseReflection: '每天沉浸学习，口语和听力都进步了。',
     accent: 'red' as const,
   },
 ]
@@ -147,7 +147,7 @@ export default function FinalReflection() {
         englishTitle="Final Reflection"
         subtitle={t({
           en: 'A personal look back at the exchange experience — what I learned, what challenged me, and how it changed me.',
-          zh: '对交流经历的个人回顾——我学到了什么，什么挑战了我，以及它如何改变了我。',
+          zh: '回顾交流经历，总结我的成长。',
         })}
         themeTag="自我认同 · Identity & Personal Experience"
         center

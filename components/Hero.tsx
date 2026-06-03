@@ -126,7 +126,7 @@ export default function Hero() {
         >
           {t({
             en: 'My experience studying at Jingshan School in China as an exchange student.',
-            zh: '我作为交流生在中国北京景山学校学习的经历。',
+            zh: '我在景山学校的交流经历。',
           })}
         </motion.p>
 
@@ -150,11 +150,11 @@ export default function Hero() {
           <p className="text-stone-300 text-sm md:text-base leading-relaxed">
             {t({
               en: `I traveled to China through the Jingshan exchange program and experienced a completely different style of education, daily life, and culture. This project explores the moments that surprised me, challenged me, and changed my perspective on learning and community.`,
-              zh: `我通过景山学校交流项目前往中国，经历了一种截然不同的教育方式、日常生活和文化。这个项目探索了那些让我惊讶、挑战我、改变我对学习和社区看法的时刻。`,
+              zh: `我去中国，体验了不同的教育与文化。`,
             })}
           </p>
           <p className="text-stone-500 text-xs mt-3 font-chinese">
-            这个项目记录了我在中国的交流经历 · 探索文化差异与个人成长
+            记录我的中国交流经历
           </p>
         </motion.div>
 

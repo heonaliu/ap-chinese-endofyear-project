@@ -92,6 +92,7 @@ const schoolCards = [
       zh: '为高考备考，压力很大。',
     },
     image: { label: 'Students studying / homework / books', sublabel: '学习 · 高考备考' },
+    imageSrc: '/images/academic.jpg',
     accent: 'red' as const,
   },
   {

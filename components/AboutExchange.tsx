@@ -60,6 +60,7 @@ const storyCards = [
       en: '[ Write your story here: What did you imagine Chinese school would be like? How accurate were your expectations? ]',
       zh: '[ 在这里写你的故事：你想象中的中国学校是什么样的？你的期待有多准确？ ]',
     },
+    image: '/images/story-photo-2.jpg',
   },
   {
     prompt: { en: 'My first impressions…', zh: '我的第一印象……' },
@@ -67,6 +68,7 @@ const storyCards = [
       en: '[ Write your story here: Describe your first 24 hours in China. What surprised you most? ]',
       zh: '[ 在这里写你的故事：描述你在中国的前24小时。什么让你最惊讶？ ]',
     },
+    image: '/images/story-photo-3.jpg',
   },
 ]
 

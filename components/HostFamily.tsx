@@ -180,8 +180,24 @@ export default function HostFamily() {
         viewport={{ once: true }}
         className="grid grid-cols-3 gap-3 mb-16"
       >
-        <PlaceholderImage label="Host family home / apartment" aspectRatio="portrait" />
-        <PlaceholderImage label="Family meal / dinner table" aspectRatio="portrait" sublabel="一起吃饭" />
+        <div className="relative w-full aspect-[3/4] rounded-xl overflow-hidden">
+          <Image
+            src="/images/host-apartment.jpg"
+            alt="Host family home"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 33vw, 20vw"
+          />
+        </div>
+        <div className="relative w-full aspect-[3/4] rounded-xl overflow-hidden">
+          <Image
+            src="/images/host-meal.jpg"
+            alt="Family meal / dinner table"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 33vw, 20vw"
+          />
+        </div>
         <div className="relative w-full aspect-[3/4] rounded-xl overflow-hidden">
           <Image
             src="/images/host-fam.jpg"

@@ -43,8 +43,8 @@ export default function Home() {
       <SchoolLife />
       <HostFamily />
       <Gallery />
-      <Footer />
       <ProjectOverview />
+      <Footer />
     </main>
   )
 }

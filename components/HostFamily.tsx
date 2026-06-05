@@ -1,9 +1,8 @@
 'use client'
 
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { Home, Coffee, Bike, MessageCircle, Heart, ChevronDown } from 'lucide-react'
+import { Home, Coffee, Bike, MessageCircle, Heart } from 'lucide-react'
 import SectionHeader from '@/components/ui/SectionHeader'
 import PlaceholderImage from '@/components/ui/PlaceholderImage'
 import { useLang } from '@/contexts/LanguageContext'
@@ -78,7 +77,6 @@ const journalEntries = [
 ]
 
 function JournalCard({ entry, index }: { entry: typeof journalEntries[0]; index: number }) {
-  const [open, setOpen] = useState(false)
   const { t } = useLang()
   const accentText = entry.accent === 'red' ? 'text-accent-red' : 'text-accent-gold'
   const accentBg = entry.accent === 'red' ? 'bg-accent-red/10' : 'bg-accent-gold/10'
@@ -116,39 +114,6 @@ function JournalCard({ entry, index }: { entry: typeof journalEntries[0]; index:
           </p>
         </div>
 
-        {/* Story prompt toggle */}
-        <button
-          onClick={() => setOpen(o => !o)}
-          className={`flex items-center gap-2 text-sm ${accentText} hover:opacity-80 transition-opacity`}
-        >
-          <span className="font-chinese">{t(entry.prompt)}</span>
-          <ChevronDown
-            size={14}
-            className={`transition-transform duration-300 ${open ? 'rotate-180' : ''}`}
-          />
-        </button>
-
-        {/* Expandable story placeholder */}
-        <AnimatePresence>
-          {open && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: 'auto', opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.35 }}
-              className="overflow-hidden"
-            >
-              <div className="mt-4 p-4 bg-stone-900 rounded-lg border border-dashed border-stone-700">
-                <p className="text-stone-500 text-sm italic leading-relaxed">
-                  {t(entry.story)}
-                </p>
-                <p className="text-stone-700 text-xs mt-3 font-chinese">
-                  [ 替换为你的真实故事 · Replace with your actual experience ]
-                </p>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
       </div>
     </motion.div>
   )
@@ -227,12 +192,6 @@ export default function HostFamily() {
           <div className="flex-1">
             <p className="font-chinese text-accent-gold/80 text-sm mb-2">寄宿家庭总结 · Host Family Reflection</p>
             <h3 className="font-serif text-2xl text-stone-100 mb-4">What Living with a Family Taught Me</h3>
-            <p className="text-stone-400 text-sm leading-relaxed">
-              {t({
-                en: `[ Write a paragraph here about your overall experience living with your host family. What was the most meaningful part? How did it change your understanding of Chinese family values — concepts like 孝顺 (filial piety), 面子 (face), or 勤劳 (diligence)? ]`,
-                zh: `[ 在这里写一段关于与寄宿家庭生活的整体感受。最有意义的是什么？它如何改变了你对中国家庭价值观的理解——例如孝顺、面子或勤劳？ ]`,
-              })}
-            </p>
           </div>
           <div className="md:w-48 flex-shrink-0">
             <div className="relative w-full aspect-square rounded-xl overflow-hidden">

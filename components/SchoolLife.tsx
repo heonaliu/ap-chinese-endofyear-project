@@ -1,9 +1,8 @@
 'use client'
 
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { Plus, Minus, GraduationCap, Users, Clock, Utensils, Shirt, BookMarked } from 'lucide-react'
+import { GraduationCap, Users, Clock, Utensils, Shirt, BookMarked } from 'lucide-react'
 import SectionHeader from '@/components/ui/SectionHeader'
 import PlaceholderImage from '@/components/ui/PlaceholderImage'
 import { useLang } from '@/contexts/LanguageContext'
@@ -115,7 +114,6 @@ const schoolCards = [
 ]
 
 function SchoolCard({ card, index }: { card: typeof schoolCards[0]; index: number }) {
-  const [open, setOpen] = useState(false)
   const { t } = useLang()
   const accentBg = card.accent === 'red' ? 'bg-accent-red/10 text-accent-red' : 'bg-accent-gold/10 text-accent-gold'
   const accentText = card.accent === 'red' ? 'text-accent-red' : 'text-accent-gold'
@@ -149,59 +147,16 @@ function SchoolCard({ card, index }: { card: typeof schoolCards[0]; index: numbe
       )}
 
       <div className="p-5">
-        {/* Header */}
-        <div className="flex items-start justify-between mb-3">
-          <div className="flex items-center gap-2">
-            <div className={`p-1.5 rounded-md ${accentBg}`}>{card.icon}</div>
-            <div>
-              <h3 className="font-serif font-semibold text-stone-100 text-base">{t(card.title)}</h3>
-              <p className={`font-chinese text-xs ${accentText} opacity-70 mt-0.5`}>
-                {card.chineseCaption}
-              </p>
-            </div>
+        <div className="flex items-center gap-2 mb-3">
+          <div className={`p-1.5 rounded-md ${accentBg}`}>{card.icon}</div>
+          <div>
+            <h3 className="font-serif font-semibold text-stone-100 text-base">{t(card.title)}</h3>
+            <p className={`font-chinese text-xs ${accentText} opacity-70 mt-0.5`}>
+              {card.chineseCaption}
+            </p>
           </div>
-          <button
-            onClick={() => setOpen(o => !o)}
-            className={`p-1.5 rounded-full ${accentBg} transition-transform duration-300 ${open ? 'rotate-180' : ''}`}
-          >
-            {open ? <Minus size={14} /> : <Plus size={14} />}
-          </button>
         </div>
-
-        {/* Preview detail */}
-        <p className="text-stone-500 text-xs leading-relaxed mb-2">{t(card.detail)}</p>
-
-        {/* Story prompt */}
-        <button
-          onClick={() => setOpen(o => !o)}
-          className={`text-xs ${accentText} hover:underline font-chinese`}
-        >
-          {t(card.prompt)} →
-        </button>
-
-        {/* Expandable story */}
-        <AnimatePresence>
-          {open && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: 'auto', opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.35 }}
-              className="overflow-hidden"
-            >
-              <div className="mt-4 p-4 bg-stone-900 rounded-lg border border-dashed border-stone-700">
-                <p className="text-stone-500 text-sm italic leading-relaxed">
-                  {t(card.story)}
-                </p>
-                <div className="mt-3 pt-3 border-t border-stone-800">
-                  <p className="font-chinese text-stone-600 text-xs">
-                    [ 用你自己的故事替换这段文字 · Replace with your own story ]
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        <p className="text-stone-500 text-xs leading-relaxed">{t(card.detail)}</p>
       </div>
     </motion.div>
   )

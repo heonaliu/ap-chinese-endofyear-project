@@ -119,15 +119,6 @@ function ReflectionCard({ item, index }: ReflectionCardProps) {
           {t(item.reflection)}
         </p>
 
-        {/* Story placeholder */}
-        <div className="p-4 bg-stone-900 rounded-xl border border-dashed border-stone-700">
-          <p className="text-stone-500 text-sm italic leading-relaxed">
-            {t(item.prompt)}
-          </p>
-          <p className="text-stone-700 text-xs mt-3 font-chinese">
-            [ 替换为你真实的反思内容 · Replace with your genuine reflection ]
-          </p>
-        </div>
       </div>
     </motion.div>
   )
@@ -208,11 +199,6 @@ export default function FinalReflection() {
                 <div>
                   <p className="font-chinese text-accent-gold/70 text-sm mb-1">{prompt.zh}</p>
                   <p className="text-stone-400 text-sm italic">{prompt.en}</p>
-                  <div className="mt-2 p-3 bg-stone-900 rounded-lg border border-dashed border-stone-700">
-                    <p className="text-stone-600 text-xs">
-                      [ Write your genuine reflection here for this prompt ]
-                    </p>
-                  </div>
                 </div>
               </motion.div>
             ))}

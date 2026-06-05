@@ -1,9 +1,8 @@
 'use client'
 
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { MapPin, Calendar, Plane, ChevronDown } from 'lucide-react'
+import { MapPin, Calendar, Plane } from 'lucide-react'
 import SectionHeader from '@/components/ui/SectionHeader'
 import PlaceholderImage from '@/components/ui/PlaceholderImage'
 import { useLang } from '@/contexts/LanguageContext'
@@ -127,7 +126,6 @@ interface StoryCardProps {
 
 function StoryCard({ card, index }: StoryCardProps) {
   const { t } = useLang()
-  const [expanded, setExpanded] = useState(false)
 
   return (
     <motion.div
@@ -137,7 +135,6 @@ function StoryCard({ card, index }: StoryCardProps) {
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="card-dark rounded-xl overflow-hidden border border-white/5 hover:border-accent-red/20 transition-all duration-300"
     >
-      {/* Image */}
       {card.image ? (
         <div className="relative w-full aspect-video">
           <Image
@@ -157,40 +154,9 @@ function StoryCard({ card, index }: StoryCardProps) {
       )}
 
       <div className="p-5">
-        <p className={`font-chinese text-accent-gold text-sm mb-2`}>
+        <p className="font-chinese text-accent-gold text-sm">
           {t(card.prompt)}
         </p>
-        <button
-          onClick={() => setExpanded(e => !e)}
-          className="flex items-center gap-2 text-stone-500 text-xs hover:text-stone-300 transition-colors mb-3"
-        >
-          <ChevronDown
-            size={14}
-            className={`transition-transform duration-300 ${expanded ? 'rotate-180' : ''}`}
-          />
-          {expanded ? 'Collapse' : 'Read story placeholder'}
-        </button>
-
-        <AnimatePresence>
-          {expanded && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: 'auto', opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="overflow-hidden"
-            >
-              <div className="p-4 bg-stone-900 rounded-lg border border-dashed border-stone-700">
-                <p className="text-stone-500 text-sm italic leading-relaxed">
-                  {t(card.placeholder)}
-                </p>
-                <p className="text-stone-700 text-xs mt-3 font-chinese">
-                  [ 在这里替换为你的真实故事 ]
-                </p>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
       </div>
     </motion.div>
   )
